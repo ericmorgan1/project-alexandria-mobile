@@ -1,0 +1,13 @@
+{
+  "name": "Project Alexandria",
+  "short_name": "Alexandria",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#2196F3",
+  "icons": [{
+    "src": "icon-iPhone.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }]
+}

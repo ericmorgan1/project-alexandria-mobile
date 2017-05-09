@@ -1,0 +1,53 @@
+
+/* Make header bar transparent */
+.bar.bar-header {
+	background-color:transparent;
+	border:none;
+}
+
+
+
+.book-search-container {
+	padding-top: 200px;
+}
+
+.book-search-input {
+	border-radius: 	10px;
+	margin-left:	20px;
+	margin-right: 	20px;
+}
+
+.book-search-results {
+	display:none;
+}
+
+/* ANIMATIONS FOR SLIDING THE INPUT UP AND DOWN */
+
+@keyframes bookSearchContainerSlideUp {
+	from  	{ padding-top:200px; }
+    to      	{ padding-top:0px; }
+}
+
+@keyframes bookSearchInputSlideUp {
+    from  	{ border-radius:10px; margin-left:20px; margin-right:20px; }
+    to      	{ border-radius: 0px; margin-left: 0px; margin-right: 0px; }
+}
+
+@keyframes bookSearchContainerSlideDown {
+	from  	{ padding-top:0px; }
+    to      	{ padding-top:200px; }
+}
+
+@keyframes bookSearchInputSlideDown {
+    from  	{ border-radius: 0px; margin-left: 0px; margin-right: 0px; }
+    to      	{ border-radius:10px; margin-left:20px; margin-right:20px; }
+}
+
+.book-search-container.slide-up { animation: bookSearchContainerSlideUp 0.3s both ease-out; }
+.book-search-container.slide-up .book-search-input {	animation: bookSearchInputSlideUp 0.3s both ease-out; }
+.book-search-container.slide-up .book-search-results { display:inline; }
+
+.book-search-container.slide-down { animation: bookSearchContainerSlideDown 0.3s both ease-out; }
+.book-search-container.slide-down .book-search-input { animation: bookSearchInputSlideDown 0.3s both ease-out; }
+.book-search-container.slide-down .book-search-results { display:none; }
+

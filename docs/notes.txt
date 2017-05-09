@@ -1,0 +1,45 @@
+
+NOTES FOR BUILDING / DEVELOPING
+
+*** RUNNING APP IN BROWSER ***
+- Use the "Getting Started" guide from the Ionic Framework: https://ionicframework.com/getting-started/
+- Run "ionic serve" from a command line in the ionic directory
+
+*** BUILDING APP FOR IPHONE ***
+- It only works on a Mac and you need to have XCode installed.
+- Then, run these commands:
+	- cordova platform add ios
+	- ionic resources
+	- ionic build ios
+- Open the "platforms/ios/xxx.xcodeproj" file
+- Take care of any XCode errors (sometimes you have to sign in with your developer ID, sometimes you have to update some libraries)
+- Run the project from XCode (you can use an emulator or your actual device)	
+- More details: http://docs.usecreator.com/docs/export-a-native-ipa-for-apple
+
+*** BUILDING APP FOR ANDROID ***
+<I haven't done this yet, so not confident on it>
+
+*** NOTES ON FILES/DIRECTORIES ***
+
+All the important files for development are in the /www directory.
+I don't use the /scss directory, but if you wanted, you could compile files from that directory into CSS.
+
+/resources/icon.png				When you run "ionic resources", this will be used to create icons of various sizes
+/resources/splash.png 			When you run "ionic resources", this will be used to create splash screens of various sizes
+
+/www/css/* 						Contains all the CSS styles for the app.
+/www/css/ionic.app.css	 		Default styles for an Ionic app. (Don't recommend modifying this).
+/www/css/custom.css				Contains custom styles and overrides for the app.
+
+/img/*							Contains images used by the app.
+
+/js/*							Contains JS scripts used by the app
+/js/app.js						Auto-generated file that does some configuration.
+/js/controllers.js 				AngularJS controllers (handle logic of the pages)
+/js/directives.js 				AngularJS directives (reusable components)
+/js/routes.js 					Handles UI routing
+/js/services.js					AngularJS services (for accessing data like the API)
+
+/lib/* 							Files used by Ionic framework
+
+/templates/* 					HTML markup for the individual pages

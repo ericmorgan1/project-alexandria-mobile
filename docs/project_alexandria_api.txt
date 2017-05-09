@@ -1,0 +1,47 @@
+projectalexandria.net API "documentation"
+
+All endpoints are currently under projectalexandria.net/api/v1/
+
+/search?title=&author=
+        Search for books by title and/or author.
+Output:
+        {'response': [
+                {'title': Book title,
+                'author': Book author(s),
+                'id':     UUID used to identify a unique book},
+                ... ]}
+
+        The 'id' field is what you'll be using to access more information about each book. The
+        length of the list of results is currently 20, but that could change.
+
+/books/:id
+        Get information about a single book.
+Output:
+        {'id':         Same ID that was submitted,
+        'title':       Book title,
+        'author':      Book author(s),
+        'isbn':        Book ISBN,
+        'description': Brief description of book (no explicit wordlimit, though they're generally
+                100-400 words); may contain HTML/character entities. Description may contain
+                information about the physical book along with story information.}
+
+        'id', 'title', and 'author' should match what you saw in the search results. We do not
+        expose any sort of API to get the book cover, but you can use the Zola Books API along
+        with the 'isbn' field to get a book cover image like so: api.zo.la/v4/image/display?id=:isbn&w=
+        where w indicates the image width you'd like.
+
+/books/:id/neighbors
+        Get information about a book's most similar "neighbors".
+Output:
+        {'response: [
+                {'id':    UUID used to identify a unique book,
+                'title':  Neighbor book title,
+                'author': Neighbor book author(s),
+                'similarity_reasons': [ ... ]
+                        List of enum-style strings detailing the way in which the neighbor
+                        is similar, with the most significant reason first.
+                        Possible values: 'topics', 'expert_opinions', 'authors', 'descriptions',
+                        'word_choice'
+                }, ...]}
+
+        Currently, 5 neighbors are returned, though that may be tunable in the future.

@@ -1,0 +1,45 @@
+<ion-view title="{{book.title || 'Book Details'}}">
+	
+	<!-- Search Button (returns to search page) -->
+	<ion-nav-buttons side="right" class="has-header">
+		<button class="button button-icon icon ion-search" ui-sref="search"></button>
+	</ion-nav-buttons>
+
+	<ion-content padding="true" class="has-header">
+	
+		<!-- Image / Title / Author / ISBN -->
+		<div>
+			<div style="width:50%; float:left; padding:5px;">
+				<img style="width:100%; text-align:center;" ng-src="{{bookImage}}"></img>
+			</div>
+			
+			<div style="width:50%; float:left; padding:5px; text-align:center;">
+				<h3>{{book.title}}</h3>
+				<h4>{{book.author}}</h4>
+				<div style="height:20px;"></div>
+				ISBN: {{book.isbn}}
+			</div>
+			
+			<div style="clear:both;"></div>
+		</div>
+		
+		<!-- Description -->
+		<div style="background-color:#EEEEEE; padding:10px;">
+			<strong>Description</strong><br />
+			<p ng-bind-html="book.description"></p>
+		</div>
+		
+		<!-- Similar Books ("Neighbors") -->
+		<hr /><h2>Similar Books</h2>
+		<ion-list>
+			<ion-item ng-repeat="neighbor in neighbors" ui-sref="bookDetails({bookID: neighbor.id})">
+				<strong>{{neighbor.title}}</strong>&nbsp;{{neighbor.author}}<br />
+				{{neighbor.similarity_explanation}}
+			</ion-item>
+			
+			<!-- Message if no results -->
+			<ion-item ng-if="neihbors.length == 0">No similar books found</ion-item>
+		</ion-list>
+		
+	</ion-content>
+</ion-view>
