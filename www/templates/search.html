@@ -1,8 +1,9 @@
-<ion-view title="" hide-back-button="true">
-	<ion-content padding="false" class="has-header">
+<ion-view title="" hide-back-button="true" hide-nav-bar="true">
+	<ion-content padding="false" class="manual-ios-statusbar-padding">
 		
-		<!-- TODO: Clean this up / change font / etc. -->
-		<h3 style="text-align:center; padding-top:20px;">Project Alexandria</h3>
+		<div class="header" style="background-color:#2196F3;">
+			<h2 class="logo">Project Alexandria</h2>
+		</div>
 		
 		<div class="book-search-container" ng-class="{'slide-up':data.searchQuery.length > 0,'slide-down':data.searchQuery.length == 0}">
 		
@@ -22,9 +23,9 @@
 				
 				<!-- Search Results -->
 				<ion-item ng-repeat="book in books" class="item item-avatar" ui-sref="bookDetails({bookID: book.id})">
-						<img ng-src="{{book.imageURL}}">
-						<h2>{{book.title}}</h2>
-						<p>{{book.author}}</p>
+					<img ng-src="{{book.imageURL}}">
+					<h2>{{book.title}}</h2>
+					<p>{{book.author}}</p>
 				</ion-item>
 				
 				<!-- Message if no results -->
