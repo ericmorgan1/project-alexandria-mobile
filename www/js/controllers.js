@@ -52,6 +52,22 @@ angular.module('app.controllers', [])
 		}, function(error) { console.log(error); });
 	};
 	
+	$scope.test = function() {
+		return "eric";
+	};
+	
+	$scope.getSimilarityReasonDisplay = function(neighbor) {
+		// Return blank if no reasons...
+		if (neighbor.similarity_reasons.length == 0) { return ""; }
+		
+		// Combine reasons into comma delimited list...
+		var similarityReasons = neighbor.similarity_reasons.map(function(reason) {
+			return BookFactory.getSimilarityReasonDisplayName(reason);
+		}).join(", ");
+		
+		return "Reason: " + similarityReasons;
+	};
+	
 	// Initialize when view is entered...
 	$scope.$on('$ionicView.afterEnter', function(event)  { $scope.init(); });
 }])

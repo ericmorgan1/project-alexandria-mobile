@@ -1,17 +1,7 @@
 
-
-
-/* Make header bar transparent */
-/*
-.bar.bar-header {
-	background-color:transparent;
-	border:none;
-}
-*/
-
 /* Logo/Header */
-.header-logo { font-family: 'Dancing Script', cursive; font-size:24px; }
-
+.header-logo { font-family: 'Dancing Script', cursive; }
+.header-logo .header-item { font-size:24px; }
 
 /* Main App */
 

@@ -82,6 +82,18 @@ angular.module('app.services', [])
 				});
 			});
 		},
+		
+		// Returns a displayable string for the given similarity reason
+		getSimilarityReasonDisplayName: function(similarityReason) {
+			switch(similarityReason) {
+				case this.SimilarityReasons.Topics:				return "Topics";
+				case this.SimilarityReasons.ExpertOpinions:		return "Expert Opinions";
+				case this.SimilarityReasons.Authors:			return "Authors";
+				case this.SimilarityReasons.Descriptions:		return "Descriptions";
+				case this.SimilarityReasons.WordChoice:			return "Word Choice";
+				default: 										return "";				
+			}
+		},
 	};
 }])
 

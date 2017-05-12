@@ -31,9 +31,10 @@
 		<!-- Similar Books ("Neighbors") -->
 		<hr /><h2>Similar Books</h2>
 		<ion-list>
+			<!-- Neighbor Details -->
 			<ion-item ng-repeat="neighbor in neighbors" ui-sref="bookDetails({bookID: neighbor.id})">
 				<strong>{{neighbor.title}}</strong>&nbsp;{{neighbor.author}}<br />
-				{{neighbor.similarity_explanation}}
+				<span style="font-size:12px;">{{getSimilarityReasonDisplay(neighbor)}}</span>
 			</ion-item>
 			
 			<!-- Message if no results -->
