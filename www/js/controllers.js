@@ -6,11 +6,7 @@ angular.module('app.controllers', [])
 // TODO: controllers.js: Better error handling (rather than just logging to console)
 // TODO: controllers.js: If you want, you can load the book details and image separately (could be a little faster)
 // TODO: search.html: Animation is really slow
-// TODO: search.html: Use the actual logo from the website
 // TODO: bookDetails.html: Clean up UI
-// TODO: templates: Use color-theme from website, logo, etc.
-// TODO: resources/icon.png: Get an icon for mobile app
-// TODO: resources/splash.png: Get a splash screen for mobile app
 
 // Controller for search page...
 .controller('searchCtrl', ['$scope', 'BookFactory', function ($scope, BookFactory) {

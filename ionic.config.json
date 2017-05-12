@@ -1,5 +1,4 @@
 {
   "name": "Project Alexandria",
-  "app_id": "com.corpica.project-alexandria.ios",
-  "gulpStartupTasks": ["sass", "watch"]
+  "app_id": "com.corpica.project-alexandria.ios"
 }

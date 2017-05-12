@@ -2,15 +2,15 @@
 
 
 /* Make header bar transparent */
+/*
 .bar.bar-header {
 	background-color:transparent;
 	border:none;
 }
+*/
 
 /* Logo/Header */
-.logo { color:white; font-family: 'Dancing Script', cursive; }
-.header { padding-top:10px; padding-bottom:10px; }
-.header .logo { text-align: center; }
+.header-logo { font-family: 'Dancing Script', cursive; font-size:24px; }
 
 
 /* Main App */
