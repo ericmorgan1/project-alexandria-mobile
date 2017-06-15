@@ -71,6 +71,12 @@ angular.module('app.controllers', [])
 	// Initialize when view is entered...
 	$scope.$on('$ionicView.afterEnter', function(event)  { $scope.init(); });
 }])
-   
+ 
+// Controller for About page...
+.controller('aboutCtrl', ['$scope', '$stateParams', function($scope, $stateParams) {
+	
+}])
+ 
 .controller('graphCtrl', ['$scope', '$stateParams', function ($scope, $stateParams) {}])
+ 
  

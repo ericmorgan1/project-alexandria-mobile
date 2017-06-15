@@ -1,6 +1,6 @@
 <ion-view title="Project Alexandria" hide-back-button="true">
 	<ion-content padding="false">
-		
+	
 		<div class="book-search-container" ng-class="{'slide-up':data.searchQuery.length > 0,'slide-down':data.searchQuery.length == 0}">
 		
 			<!-- Search Box -->
@@ -8,6 +8,11 @@
 				<i class="icon ion-search placeholder-icon"></i>
 				<input class="txtSearch" type="search" placeholder="Search..." ng-model="data.searchQuery" ng-model-options="data.searchOptions" autofocus>
 			</label>
+			
+			<!-- Link to About page -->
+			<div class="text-center" ng-class="{'no-display':data.searchQuery.length > 0,'':data.searchQuery.length == 0}" style="padding-top:10px;">
+				<a ui-sref="about">About Project Alexandria</a>
+			</div>
 			
 			<!-- Results -->
 			<ion-list class="book-search-results">				

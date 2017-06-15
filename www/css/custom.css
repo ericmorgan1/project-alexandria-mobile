@@ -1,4 +1,7 @@
 
+/* Generic Classes */
+.no-display { display:none; }
+
 /* Logo/Header */
 .header-logo { font-family: 'Dancing Script', cursive; }
 .header-logo .header-item { font-size:24px; }

@@ -1,0 +1,66 @@
+<ion-view title="About">
+	<ion-content padding="true" class="has-header">
+		
+		<p>
+		Welcome to Project Alexandria! Being avid book readers ourselves, we know how hard it is to find just the right book to read. We also know the feeling of finishing a book and wanting to read another just like it.
+		</p>
+
+		<p>
+		To help readers like us, we built Project Alexandria, a book exploration engine. Unlike standard recommendation engines, we don’t just list books you may like. Rather, we let you explore a rich book landscape and highlight how books are related.
+		</p>
+
+		<p>
+		We analyzed over a million books, taking into account their genre, book descriptions, word choice and complexity, how similar their authors are, and what other people have said about the books. We connect books that have similar styles and subjects, or are written for particular audiences.
+		</p>
+
+		<img style="width:100%;" src="img/about-graph.png">
+		
+		<p>
+		One feature that we are particularly proud of is sentiment analysis. We tracked positive and negative emotions throughout a book and then compared books based on their patterns, using the syuzhet package [1]. The figure above illustrates our automated output for Romeo and Juliet. We ran this feature for each book in Project Gutenberg. To see more of these graphs, we recommend searching for the following books:
+		</p>
+		
+		<ol>
+			<li>1. Romeo and Juliet by William Shakespeare</li>
+			<li>2. A Tale of Two Cities by Charles Dickens</li>
+			<li>3. The Adventures of Huckleberry Finn by Mark Twain</li>
+		</ol><br />
+		
+		<p>
+		We also leveraged DBPedia to figure out how similar any two given authors may be [2]. To do so, we created a map, connecting authors who may have influenced one another. The similarity between authors was then determined by the overlap of the neighborhoods around each author. The image below contains one particular section of this author map.
+		</p>
+		
+		<img style="width:100%;" src="img/about-relations.jpg">
+
+		<p>
+		We built this exploration engine as part of our Senior Design Project at the Department of Electrical & Computer Engineering at the University of Texas at Austin. Thank you to Dr. Constantine Caramanis for your support and advice throughout the project. Thank you also to Zola Books for providing us our starting data.
+		</p>
+		
+		<p>
+		The Team:		
+			<ul style="padding-left:20px;">
+				<li>- Nikhil Garg</li>
+				<li>- Joseph Lubars</li>
+				<li>- Chris Roberts</li>
+				<li>- Gavin Sellers</li>
+				<li>- Sean Steel</li>
+				<li>- Ankit Tandon</li>
+			</ul>	
+		</p>
+		
+		<p>
+		Citations:
+		
+			<ul>
+				<li>[1] M. Jockers, Syuzhet: Extract Sentiment and Plot Arcs from Text. 2015.</li>
+				<li>[2] http://dbpedia.org/</li>
+				<li>[3] Wei Dong, Charikar Moses, and Kai Li, “Efficient k-nearest neighbor graph construction for generic similarity measures,” In Proceedings of the 20th international conference on World wide web (WWW '11). ACM, New York, NY, USA, 577-586</li>
+				<li>[4] I. Matveeva and A. Farahart, “Generalized latent semantic analysis,” US8312021 B2, 13-Nov-2012.</li>
+			</ul>		
+		</p>
+
+		<p>
+		Project Alexandria is a participant in the Powered By Zola Partners Program, a program designed to provide a means for sites to earn Revenue Shares by linking to the Powered By Zola Platform for the purpose of selling Products.
+		</p>
+
+	</ion-content>
+</ion-view>
